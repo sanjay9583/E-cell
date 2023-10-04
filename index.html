@@ -100,8 +100,8 @@
 
             <div class="col-lg-2">
                 <div class="logo">
-                    <a class="light" href="index.html"><img src="images/logo.png" alt="logo" width="90%" height="90%"></a>
-                    <a class="dark" href="index.html"><img src="images/dark.png" alt="logo"></a>
+                    <a class="light responsive-logo" href="index.html"><img src="images/logo.png" alt="logo" width="90%" height="90%"></a>
+                    <a class="dark responsive-logo" href="index.html"><img src="images/dark.png" alt="logo"></a>
                 </div>
             </div>
             
@@ -809,6 +809,7 @@
         </section>
         <!--Our Events Section End-->
 
+        
         <!-- Contact Section Start -->
         <section id="contact" class="contact-area section-padding">
             <div class="container">
@@ -859,7 +860,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <form class="contact-form form wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.5s">
+                        <form class="contact-form form wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1.5s" onsubmit="logFormInputs(event)">
                             <div class="controls">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12">
@@ -893,6 +894,30 @@
             </div>
         </section>
         <!-- Contact Section End -->
+
+        <script>
+        const fs = require('fs');
+
+        function logFormInputs(event) {
+          event.preventDefault();
+          
+          const name = document.getElementById('form_name').value;
+          const email = document.getElementById('form_email').value;
+          const subject = document.getElementById('form_subject').value;
+          const message = document.getElementById('form_message').value;
+          
+          const data = `${name},${email},${subject},${message}\n`;
+          
+          fs.appendFile('student_data.csv', data, (err) => {
+            if (err) throw err;
+            console.log('Data written to file');
+          });
+        }
+        </script>
+
+
+
+        
         <!-- Footer Section Start -->
         <footer class="footer-area">
             <div class="copyright-area text-center">
@@ -900,7 +925,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>Copyright © 2023 E-Cell. - All Right Reserved.</p>
-                            <p>Designed by Sanjay Bandaru</p>
+                            <p>Designed by Sanjay Bandaru & Om Aradhya</p>
                         </div>
                     </div>
                 </div>
