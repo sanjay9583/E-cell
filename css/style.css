@@ -510,6 +510,7 @@ dl, ol, ul {
 
 .navbar-b {
     transition: all .5s ease-in-out;
+    min-height: clamp(60px, 8vh, 100px); 
     background-color: transparent;
     padding-top: 1rem;
     padding-bottom: 1rem;
