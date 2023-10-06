@@ -43,6 +43,28 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="css/responsive.css">
 
+    <style>
+        /* Add some basic reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Add vendor prefixes for Flexbox */
+        .navbar-nav {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+        /* Add vendor prefixes for transitions (if you have any) */
+        .nav-link {
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        /* ... other CSS styles ... */
+    </style>
+
 
 
 
@@ -61,7 +83,7 @@
     <div class="Jaxson-page-wrapper">
         <!-- Navbar Section Start -->
         <nav id="mainNav" class="navbar navbar-b navbar-trans navbar-expand-md fixed-top">
-            <div class="col-md-10 container">
+            <div class="container">
                 <div class="logo">
                     <a class="light" href="index.html"><img src="images/white .png" alt="logo" width="20%" height="20%"></a>
                     <a class="dark" href="index.html"><img src="images/BRUH.png" alt="logo"  width="20%" height="20%"></a>
