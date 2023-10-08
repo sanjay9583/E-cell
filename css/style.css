@@ -466,6 +466,19 @@ dl, ol, ul {
  * 03.Navber Style
  *************************************/
 
+ @media screen and (min-resolution:.001dpcm) {
+    @media{
+        .navbar {
+            height: auto; /* or you can set a specific height like 70px if you know the desired height */
+        }
+        .navbar .logo img {
+            height: 60%;
+            width: 60%; /* Optionally, you can set a specific width if needed */
+        }
+    }
+}
+
+
  .logo {
     padding: 5px 0;
 }
@@ -1258,7 +1271,7 @@ dl, ol, ul {
 .contact-area .form input, .contact-area .form textarea {
     width: 100%;
     padding: 10px 20px;
-    color: #000;
+    color: #ffffff;
     border: 0;
     padding-left: 5px;
     background-color: transparent;
