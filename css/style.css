@@ -471,10 +471,14 @@ dl, ol, ul {
         .navbar {
             height: auto; /* or you can set a specific height like 70px if you know the desired height */
         }
+        /* .image {
+            height: auto;
+        } */
         .navbar .logo img {
             height: 60%;
             width: 60%; /* Optionally, you can set a specific width if needed */
         }
+
     }
 }
 
