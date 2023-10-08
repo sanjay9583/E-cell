@@ -894,29 +894,6 @@
             </div>
         </section>
         <!-- Contact Section End -->
-
-        <script>
-        const fs = require('fs');
-
-        function logFormInputs(event) {
-          event.preventDefault();
-          
-          const name = document.getElementById('form_name').value;
-          const email = document.getElementById('form_email').value;
-          const subject = document.getElementById('form_subject').value;
-          const message = document.getElementById('form_message').value;
-          
-          const data = `${name},${email},${subject},${message}\n`;
-          
-          fs.appendFile('student_data.csv', data, (err) => {
-            if (err) throw err;
-            console.log('Data written to file');
-          });
-        }
-        </script>
-
-
-
         
         <!-- Footer Section Start -->
         <footer class="footer-area">
